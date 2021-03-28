@@ -5,6 +5,7 @@ import java.util.List;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.reader.ReaderAngajati;
 import ro.ase.cts.reader.ReaderAplicanti;
+import ro.ase.cts.reader.ReaderElevi;
 import ro.ase.cts.reader.ReaderStudenti;
 
 public class Program {

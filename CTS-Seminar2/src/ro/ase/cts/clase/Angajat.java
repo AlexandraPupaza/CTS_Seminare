@@ -27,21 +27,23 @@ public class Angajat extends Aplicant{
 		super();
 		
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Angajat: Nume=" + nume + ", Prenume=" + prenume
-				+ ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		StringBuilder builder = new StringBuilder();
+		builder.append("Angajat [ocupatie=");
+		builder.append(ocupatie);
+		builder.append(", salariu=");
+		builder.append(salariu);
+		builder.append("]");
+		return builder.toString();
 	}
 	
-	
-	public int finantare() {
-		int s=10;
+	//public int finantare() {
+		//int s=10;
 		// TODO Auto-generated method stub
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
-	}
+		//System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		//return s;
+	//}
 	
 }
