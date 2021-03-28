@@ -9,9 +9,13 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
-public class ReaderAngajati implements ReaderAplicant{
-	public List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+public class ReaderAngajati extends ReaderAplicanti{
+	public ReaderAngajati(String numeFisiser) {
+		super(numeFisiser);
+	}
+	
+	public List<Aplicant> readAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.numeFisiser));//ctrl+space=>genereaza denumiri de atribute/clase
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 

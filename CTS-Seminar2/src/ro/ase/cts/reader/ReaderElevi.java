@@ -9,9 +9,13 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.Elev;
 
-public class ReaderElevi implements ReaderAplicant{
-	 public List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+public class ReaderElevi extends ReaderAplicanti{
+	public ReaderElevi(String numeFisiser) {
+		super(numeFisiser);
+	}
+	
+	 public List<Aplicant> readAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.numeFisiser));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
