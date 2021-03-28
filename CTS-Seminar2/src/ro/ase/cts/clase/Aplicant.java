@@ -30,11 +30,16 @@ public abstract class Aplicant{
 		this.varsta = varsta;
 	}
 	public void statut(){
-		if(punctaj>80)
-			System.out.println("Aplicantul "+nume+" "+prenume+" a fost acceptat.");
-		else
-			System.out.println("Aplicantul "+nume+" "+prenume+" nu a fost acceptat.");
+		StringBuilder builder = new StringBuilder();
+		builder.append("Aplicantul nume ");
+		builder.append(nume);
+		builder.append(" prenume ");
+		builder.append(prenume);
+		String statut= punctaj > Proiect.statut ? "a fost acceptat" : "nu a fost acceptat";
+		builder.append(statut);
+		System.out.println(builder.toString());
 		}
+	
 	public int getPunctaj() {
 		return punctaj;
 	}
@@ -85,7 +90,14 @@ public abstract class Aplicant{
 		return builder.toString();
 	}
 
-
+	public String finantare() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Aplicant nume=");
+		builder.append(nume);
+		builder.append(", prenume=");
+		builder.append(prenume);
+		return builder.toString();
+	}
 	
 	
 	

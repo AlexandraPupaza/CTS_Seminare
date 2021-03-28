@@ -44,10 +44,14 @@ public class Elev extends Aplicant{
 		this.tutore = tutore;
 	}
 	
-	public int finantare() {
-		int s=30;
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
+	public String finantare() {
+		final StringBuilder builder=new StringBuilder("Student:");
+		builder.append(super.finantare());
+		builder.append("primeste suma de ");
+		builder.append(Proiect.finantareElev);
+		builder.append("Euro/zi pe proiect");
+		return builder.toString();
+		
 	}
 	
 }

@@ -15,11 +15,15 @@ public class Program {
 	}
 	
 	public static void main(String[] args) {
+		//Aplicant aplicant;
 		List<Aplicant> listaAplicanti;
 		try {
 			listaAplicanti = citireAplicanti(new ReaderStudenti("studenti.txt"));
 			for(Aplicant aplicant:listaAplicanti)
 				System.out.println(aplicant.toString());
+			   // System.out.println(aplicant.finantare());
+			    //aplicant.statut();
+			    
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

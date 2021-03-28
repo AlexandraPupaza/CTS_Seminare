@@ -8,9 +8,11 @@ import ro.ase.cts.clase.Aplicant;
 
 public abstract class ReaderAplicanti {
 	protected String numeFisiser;
+	
     public abstract List<Aplicant> readAplicanti() throws FileNotFoundException;//tip abstract pt a extinde fiecare reader in parte
 //metoda abstracta ce returneaza o lista de aplicanti 
 //o facem clasa abstracta pt a putea adauga un atributde tip numeFisier
+    
     //constructor cu parametrii
 	public ReaderAplicanti(String numeFisiser) {
 		super();

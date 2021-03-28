@@ -3,6 +3,7 @@ package ro.ase.cts.clase;
 import java.util.Arrays;
 
 public class Angajat extends Aplicant{
+	
 	private String ocupatie;
 	private int salariu;
 	
@@ -39,11 +40,13 @@ public class Angajat extends Aplicant{
 		return builder.toString();
 	}
 	
-	//public int finantare() {
-		//int s=10;
-		// TODO Auto-generated method stub
-		//System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		//return s;
-	//}
+	public String finantare() {
+		final StringBuilder builder=new StringBuilder("Student:");
+		builder.append(super.finantare());
+		builder.append("primeste suma de ");
+		builder.append(Proiect.finantareAngajat);
+		builder.append("Euro/zi pe proiect");
+		return builder.toString();
+	}
 	
 }
