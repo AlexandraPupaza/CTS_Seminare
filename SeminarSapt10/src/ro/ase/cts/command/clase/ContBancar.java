@@ -23,9 +23,10 @@ public class ContBancar {
 		if(suma<this.sold) {
 		this.sold = suma;
 		System.out.println("S-a efectuat o retragere cu suma " +suma);
-	} else {
+	} 
+		else {
 		System.out.println("Fonduri insuficiente");
 	}
-		}
+  }
 
 }
