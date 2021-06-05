@@ -4,10 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 import ro.ase.cts.dubluri.StudentDummy;
+import ro.ase.cts.suite.categorii.TestPromovabilitateCategorie;
+import ro.ase.cts.suite.categorii.TesteUrgente;
+
+@Category(TestPromovabilitateCategorie.class)
 
 public class TestGetPromovabilitateGrupa {
 	
@@ -25,6 +30,7 @@ public class TestGetPromovabilitateGrupa {
 			}
 		
 	@Test
+	@Category(TesteUrgente.class)
 	public void testRight() {
 		Grupa grupa = new Grupa(1085);
 		for( int i=0;i<3;i++) {
@@ -44,6 +50,7 @@ public class TestGetPromovabilitateGrupa {
 	}
 	
 	@Test
+	@Category(TesteUrgente.class)
 	public void testBoundaryInferior() {
 		Grupa grupa = new Grupa(1085);
 		for(int i=0; i<5; i++) {
